@@ -15,7 +15,7 @@ PowerPIM was designed to be an easy to use toolkit or framework and has been wri
 1. Ensure you have Powershell 5.1 installed.
    * Download here: <https://www.microsoft.com/en-us/download/details.aspx?id=54616>
 2. Open a Powershell prompt.
-3. Set the ExecutionPolicy to RemoteSigned
+3. (Optional) Set the ExecutionPolicy to RemoteSigned
 
     ```powershell
     Set-ExecutionPolicy RemoteSigned -Force
