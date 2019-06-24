@@ -30,11 +30,11 @@ A quick rundown of what a session token or ID is can be found [here](https://en.
 
 ![PIM Session Token Creation](btpbps_token_negotiation.png)
 
-1. [RED]<span style="color:#FE2E2E"> I want to authenticate to the PIM API as username@domain. </span>
-2. [YELLOW]<span style="color:#FFBF00"> PIM/PAM takes the username and password given by the user and checks to see if the credentials stored for this user in Active Directory match. PIM/PAM will also send an MFA challenge to the user at this time. </span>
-3. [PURPLE]<span style="color:#AC58FA"> The user responds to the MFA challenge with DUO push, yubikey, DUO code, etc. </span>
-4. [GREEN]<span style="color:#01DF01"> Successful authentication and verification of identity results in a session token (or ‘session state’ as stated by the PBPS API documentation) being created. </span>
-5. [BLUE]<span style="color:#00BFFF">Subsequent calls to the PIM API (get or reset password, start a rdp session, etc.) use the session token, which shows that you’ve already authenticated. The token is valid until is expires or you make a call to the API endpoint that signs you out. Otherwise, you need to authenticate, and answer the MFA challenge every time you wanted to do something through the PIM API, such as get or change your password or start an rdp session, etc. Additionally, you could also obtain the password to your privileged or administrator account and then directly RDP to the remote using Remote Desktop Connection rather than initiating it through the BeyondTrust applicance.</span>
+1. **[RED]**<span style="color:#FE2E2E"> I want to authenticate to the PIM API as username@domain. </span>
+2. **[YELLOW]**<span style="color:#FFBF00"> PIM/PAM takes the username and password given by the user and checks to see if the credentials stored for this user in Active Directory match. PIM/PAM will also send an MFA challenge to the user at this time. </span>
+3. **[PURPLE]**<span style="color:#AC58FA"> The user responds to the MFA challenge with DUO push, yubikey, DUO code, etc. </span>
+4. **[GREEN]**<span style="color:#01DF01"> Successful authentication and verification of identity results in a session token (or ‘session state’ as stated by the PBPS API documentation) being created. </span>
+5. **[BLUE]**<span style="color:#00BFFF">Subsequent calls to the PIM API (get or reset password, start a rdp session, etc.) use the session token, which shows that you’ve already authenticated. The token is valid until is expires or you make a call to the API endpoint that signs you out. Otherwise, you need to authenticate, and answer the MFA challenge every time you wanted to do something through the PIM API, such as get or change your password or start an rdp session, etc. Additionally, you could also obtain the password to your privileged or administrator account and then directly RDP to the remote using Remote Desktop Connection rather than initiating it through the BeyondTrust applicance.</span>
 
 ### Running the back-end scripts
 
@@ -42,7 +42,7 @@ Again, the session token value is the bare minimum requirement you need in order
 
 **Note:** The –Key flag is required and in some cases the –Password flag will be required too if the API key you are using requires you to provide your domain password to use it.
 
-**Note:** If you want to sign into the API as yourself then you need to specify your username in UPN format. If you want to sign in to the API to use a shared or service account then you would specify the username of the local API user on the PIM applicance that manages the specific account you want to use. For example, if the local API user named ‘wsaapi’ manages the shared account name wsusadmin, then you would specify wsaapi as the value with the –RunAs flag.
+**Note:** If you want to sign into the API as yourself then you need to specify your username in UPN format. If you want to sign in to the API to use a shared or service account then you would specify the username of the local API user on the PIM applicance that manages the specific account you want to use. For example, if the local API user named `wsaapi` manages the shared account name `wsusadmin`, then you would specify `wsaapi` as the value with the –RunAs flag.
 
 **Again**, you must pass the variable that stores the session token if you want to make subsequent calls to the API. Observe below:
 
