@@ -57,7 +57,7 @@ When running PowerPIM with the -Detailed flag, PowerPIM will display the details
 
 [$]: and/or green - action/task success
 
-[@]: and/or cyan - signifies that a this prompt requires input or a subsequent prompt will be displayed to the user that requires input
+[@]: and/or cyan - signifies that this prompt requires input or a subsequent prompt will be displayed to the user that requires input
 ```
 
 ## A Quick Lesson About Manipulating Different Account Types With PowerPIM
