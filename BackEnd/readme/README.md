@@ -1,4 +1,4 @@
-# PIM.PSMODULE
+# PowerPIM Modules
 
 The individual PowerShell scripts that make up the PowerPIM framework/toolkit can be ran individually or without the use of the PowerPIM front-end. The method of running these scripts individually, without the use for the front-end would be for anything that would require job automation, batch automation, back-end or system maintenance automation, etc. At the bare minimum, if you implement the individual scripts that make up PowerPIM, into your own custom scripts, you need to pass around the session token. This is explained in more detail below and why this is required.
 
@@ -30,11 +30,11 @@ A quick rundown of what a session token or ID is can be found [here](https://en.
 
 ![PIM Session Token Creation](btpbps_token_negotiation.png)
 
-1. <span style="color:#FE2E2E"> I want to authenticate to the PIM API as username@domain. </span>
-2. <span style="color:#FFBF00"> PIM/PAM takes the username and password given by the user and checks to see if the credentials stored for this user in Active Directory match. PIM/PAM will also send an MFA challenge to the user at this time. </span>
-3. <span style="color:#AC58FA"> The user responds to the MFA challenge with DUO push, yubikey, DUO code, etc. </span>
-4. <span style="color:#01DF01"> Successful authentication and verification of identity results in a session token (or ‘session state’ as stated by the PBPS API documentation) being created. </span>
-5. <span style="color:#00BFFF">Subsequent calls to the PIM API (get or reset password, start a rdp session, etc.) use the session token, which shows that you’ve already authenticated. The token is valid until is expires or you make a call to the API endpoint that signs you out. Otherwise, you need to authenticate, and answer the MFA challenge every time you wanted to do something through the PIM API, such as get or change your password or start an rdp session, etc. Additionally, you could also obtain the password to your privileged or administrator account and then directly RDP to the remote using Remote Desktop Connection rather than initiating it through the BeyondTrust applicance.</span>
+1. [RED]<span style="color:#FE2E2E"> I want to authenticate to the PIM API as username@domain. </span>
+2. [YELLOW]<span style="color:#FFBF00"> PIM/PAM takes the username and password given by the user and checks to see if the credentials stored for this user in Active Directory match. PIM/PAM will also send an MFA challenge to the user at this time. </span>
+3. [PURPLE]<span style="color:#AC58FA"> The user responds to the MFA challenge with DUO push, yubikey, DUO code, etc. </span>
+4. [GREEN]<span style="color:#01DF01"> Successful authentication and verification of identity results in a session token (or ‘session state’ as stated by the PBPS API documentation) being created. </span>
+5. [BLUE]<span style="color:#00BFFF">Subsequent calls to the PIM API (get or reset password, start a rdp session, etc.) use the session token, which shows that you’ve already authenticated. The token is valid until is expires or you make a call to the API endpoint that signs you out. Otherwise, you need to authenticate, and answer the MFA challenge every time you wanted to do something through the PIM API, such as get or change your password or start an rdp session, etc. Additionally, you could also obtain the password to your privileged or administrator account and then directly RDP to the remote using Remote Desktop Connection rather than initiating it through the BeyondTrust applicance.</span>
 
 ### Running the back-end scripts
 
