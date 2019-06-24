@@ -15,3 +15,8 @@ We are not responsible for what you do with this software. This version is what 
 * Launch RDP sessions on multiple remote hosts with a single command.
 * Build an .rdg configuration file so [Remote Desktop Connection Manager](https://www.microsoft.com/en-us/download/details.aspx?id=44989)
 * Launch programs or applications like dsa.msc, mmc.exe or powershell.exe (option to add your favorite programs or applications to the configuration file) as a specified user with one simple command.
+
+## Additional Documentation & READMEs
+* [Front End Documentation](FrontEnd/readme/README.md)
+* [Back End Documentation](BackEnd/readme/README.md)
+
