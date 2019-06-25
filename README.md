@@ -7,6 +7,7 @@ We are not responsible for what you do with this software. This version is what 
 ## Things You May Want To Change Before Use
 1. Change hardcoded values in frontend_setup.psm1 (see comments with FIXME label)
 2. Change hardcoded values in backup_setup.psm1 (see comments with FIXME label)
+  #### Warning: For some reason PowerBroker Password Safe doesn't play well load balancers
 3. Several functions and modules in the front and back end scripts grab the default username of the user currently logged into the Windows machine running PowerPIM. The string 'admin' is appended on to this (usernameadmin). Your orgnization may use a different naming schema compared to ours.
 
 ## Some of the things you can do with PowerPIM
