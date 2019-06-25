@@ -1,7 +1,7 @@
 # The api key below is hard coded into the project because authentication to the API component of the appliance requires a user password for authentication as well as answerinng MFA prompt
-$script:APIKey = '' #FIXME:
-$script:PowerPIMDataDirectoryPath = "$env:APPDATA\PowerPIM" #FIXME:
-$script:ConfigPath = "$PowerPIMDataDirectoryPath\Config.json" #FIXME:
+$script:APIKey = '' #FIXME: put api key here (setup in BeyondTrust Insight console)
+$script:PowerPIMDataDirectoryPath = "$env:APPDATA\PowerPIM" #FIXME: directory for config.json file (change in Run-Alternative.ps1)
+$script:ConfigPath = "$PowerPIMDataDirectoryPath\Config.json" #FIXME:  file that holds config data (change in Run-Alternative.ps1)
 
 #Region Beginning of module template
 
