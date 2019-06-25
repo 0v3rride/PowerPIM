@@ -21,11 +21,13 @@ PowerPIM was designed to be an easy to use toolkit or framework and has been wri
     Set-ExecutionPolicy RemoteSigned -Force
     ```
 
-4. (Optional) Register the appropriate PowerShell repository in your environment.
+4. Place PowerPIM in your Orginization's PowerShell repository in your environment & Register It.
 
     ```powershell
     . "\\path\to\powershell\script\to\register\repository.ps1"
     ```
+    
+    #### or
 
 5. Issue the following PowerShell commands
 
@@ -34,6 +36,8 @@ PowerPIM was designed to be an easy to use toolkit or framework and has been wri
     Import-Module .\path\to\backend_setup.psm1
     Invoke-PowerPIM -Detailed
     ```
+    
+It's really up to you on how you want to package and deploy PowerPIM in your environment.
 
 ## Invoking PowerPIM
 
