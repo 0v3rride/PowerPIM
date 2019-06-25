@@ -1,5 +1,5 @@
 # The api key below is hard coded into the project because authentication to the API component of the appliance requires a user password for authentication as well as answerinng MFA prompt
-$script:APIKey = 'cac71a21987bc2c4c8a40d433ec8261a4763ffda468d9d7995f12c9dd7bf0cbdeaff17794da46a8fc097d2b9b14c5a7f2647cd89f61799799280d8919dda971f' #FIXME:
+$script:APIKey = '' #FIXME:
 $script:PowerPIMDataDirectoryPath = "$env:APPDATA\PowerPIM" #FIXME:
 $script:ConfigPath = "$PowerPIMDataDirectoryPath\Config.json" #FIXME:
 
