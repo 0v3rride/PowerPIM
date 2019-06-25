@@ -30,8 +30,9 @@ PowerPIM was designed to be an easy to use toolkit or framework and has been wri
 5. Issue the following PowerShell commands
 
     ```powershell
-    Install-Module PowerPIM
-    Import-Module PowerPIM
+    Import-Module .\path\to\frontend_setup.psm1
+    Import-Module .\path\to\backend_setup.psm1
+    Invoke-PowerPIM -Detailed
     ```
 
 ## Invoking PowerPIM
