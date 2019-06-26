@@ -7,7 +7,7 @@ I am not responsible for what you do with this software. This version is what I 
 ## Things You May Want To Change Before Use
 1. Change hardcoded values in `frontend_setup.psm1` (see comments with FIXME label)
 2. Change hardcoded values in `backup_setup.psm1` (see comments with FIXME label)
-3. Change hardcoded value for DurationMinutes HTTP POST variable in the request body in `Invoke-PIMRequest.ps1`
+3. Change hardcoded value for `DurationMinutes` HTTP POST variable in the request body in `Invoke-PIMRequest.ps1`
 4. Several functions and modules in the front and back end scripts grab the default username of the user currently logged into the Windows machine running PowerPIM. The string 'admin' is appended on to this (usernameadmin). Your organization may use a different naming schema compared to ours.
 
 ## Some of the things you can do with PowerPIM
